@@ -1,6 +1,5 @@
-
+/*Links*/
 a{
-
     text-decoration: none;
     color: #000000;
     border: 4px solid #000000;
@@ -14,19 +13,23 @@ a:hover{
     background-color: #9F9F9F;
     color: #000000;
 }
-
-label{
+/*Label do Menu Lateral*/
+.categlabel{
     padding: 15px;
     position: absolute;
     z-index: 1;
 }
 
+.categlabel:hover{
+    cursor: pointer;
+}
+/*Body*/
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: #D9D9D9;
     overflow: hidden;
 }
-
+/*Lista e Itens da Lista*/
 ul{
     list-style: none;
     margin: 0;
@@ -39,28 +42,28 @@ ul{
 }
 
 li{
-    padding: 50px 10px;
+    padding: 25px 10px;
     background-color: #282828;
 }
-
+/*Icones e Imagens da Lista*/
 .icon{
     width: 20%;
 }
 
 .itensicons{
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
 }
-
+/*Texto das Listas*/
 .itens{
     width: 80%;
 }
-
+/*Imagem Label*/
 #card{
     width: 50px;
     padding-top: 0px;
 }
-
+/*Input/Botão da Label e Box*/
 input[type="checkbox"]{
     display: none;
 }
@@ -82,7 +85,7 @@ input[type="checkbox"]:checked ~ nav{
     border-bottom: 0px solid #000000;
     border-top: 0px solid #000000;
 }
-
+/*Cabeçote*/
 #header{
     position: absolute;
     width: 100%;
@@ -92,7 +95,7 @@ input[type="checkbox"]:checked ~ nav{
     background: #282828;
     border: 1px solid #000000;
 }
-
+/*Nome da Página*/
 #logo{
     position: absolute;
     width: 80%;
@@ -106,7 +109,7 @@ input[type="checkbox"]:checked ~ nav{
     line-height: 84px;
     color: #ffffff;
 }
-
+/*Div total Menu Lateral*/
 #categorias{
     box-sizing: border-box;
     width: 92px;
@@ -118,7 +121,12 @@ input[type="checkbox"]:checked ~ nav{
     border-bottom: 0px solid #000000;
     border-top: 0px solid #000000;
 }
-
+/*Texto Título Categorias*/
+.navcateg{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+/*Little Cart e togethers*/
 #carrinho{
     box-sizing: border-box;
     position: absolute;
@@ -132,6 +140,22 @@ input[type="checkbox"]:checked ~ nav{
     border-top: 0px solid #000000;
 }
 
+#carrinho:hover{
+    cursor: pointer;
+}
+
+#carrinhoitens{
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-left: 65px;
+    color: #ffffff;
+}
+
+#carrinho img{
+    padding-top: 10px;
+    padding-left: 65px;
+}
+/*Entrando e togethers*/
 #login{
     box-sizing: border-box;
     position: absolute;
@@ -139,11 +163,22 @@ input[type="checkbox"]:checked ~ nav{
     height: 35px;
     right: 0px;
     top: 0px;
-    background: #7f2727;
+    background: #282828;
     border: 3px solid #000000;
     border-top: 0px solid #000000;
 }
 
+#login:hover{
+    cursor: pointer;
+}
+
+#entrar{
+    margin-top: 7px;
+    padding-top: -20px;
+    padding-left: 50px;
+    color: #ffffff;
+}
+/*Register e afins*/
 #registro{
     box-sizing: border-box;
     position: absolute;
@@ -154,4 +189,161 @@ input[type="checkbox"]:checked ~ nav{
     background: #282828;
     border: 3px solid #000000;
     border-top: 0px solid #000000;
+}
+
+#registro:hover{
+    cursor: pointer;
+}
+
+#registrar{
+    margin-top: 7px;
+    padding-top: -20px;
+    padding-left: 40px;
+    color: #ffffff;
+}
+/*Carrossel e afins*/
+.slider{
+    margin: 0 auto;
+    padding-top: 85px;
+    padding-left: 350px;
+    width: 1300px;
+    height: 230px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 250px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+/*Imagens do Carrosel*/
+.slide{
+    width: 25%;
+    position: relative;
+}
+
+.slide img{
+    width: 800px;
+}
+/*Botões do Carrossel*/
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #ffffff;
+}
+/*Comandos dos Botões do Carrossel*/
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+/*Div para automatizar o Carrosel (linkado ao JS)*/
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 210px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #ffffff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #ffffff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #ffffff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #ffffff;
+}
+/*Highlights*/
+#destaques{
+    padding-left: 690px;
+}
+/*Div Produtos*/
+#catalogo{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+/*Div Produtos2*/
+#produtos{
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Imagens Produtos*/
+#produtos img{
+    border: 2px solid #282828;
+    width: 120px;
+    height: 120px;
+}
+/*Div para alinhar interno*/
+.prodallign{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.prodallign:hover{
+    cursor: pointer;
+}
+/*Texto dos produtos*/
+.description{
+    margin-top: 0;
+    margin-left: 10px;
+    border: 1px dashed #000000;
+    background-color: #282828;
+    color: #C9C9C9;
 }
