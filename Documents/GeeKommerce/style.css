@@ -1,226 +1,177 @@
-/*Links*/
-a{
-    text-decoration: none;
-    color: #000000;
-    border: 4px solid #000000;
-    border-radius: 5%;
-    background-color: #D9D9D9;
-    display: block;
-    padding: 20px 20px;
+:root{
+    --cor-fundo : #9F9F9F;
+    --cor-fonte : #FFFFFF;
+    --cor-detalhes01 : #282828;
+    --cor-detalhes02 : #E76100;
+    ;
 }
 
-a:hover{
-    background-color: #9F9F9F;
-    color: #000000;
-}
-/*Label do Menu Lateral*/
-.categlabel{
-    padding: 15px;
-    position: absolute;
-    z-index: 1;
-}
-
-.categlabel:hover{
-    cursor: pointer;
-}
-/*Body*/
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: #D9D9D9;
-    overflow: hidden;
-}
-/*Lista e Itens da Lista*/
-ul{
-    list-style: none;
+*{
     margin: 0;
     padding: 0;
-    top: 70px;
-    position: absolute;
-    width: 100%;
-    border-right: 3px solid #000000;
-    border-bottom: 3px solid #000000;
 }
 
-li{
-    padding: 25px 10px;
-    background-color: #282828;
-}
-/*Icones e Imagens da Lista*/
-.icon{
-    width: 20%;
+body{
+    font-size: sans-serif;
+    background-color: var(--cor-fundo);
 }
 
-.itensicons{
-    height: 35px;
-    width: 35px;
-}
-/*Texto das Listas*/
-.itens{
-    width: 80%;
-}
-/*Imagem Label*/
-#card{
-    width: 50px;
-    padding-top: 0px;
-}
-/*Input/Botão da Label e Box*/
-input[type="checkbox"]{
+/* INICIO HEADER */
+#chec{
     display: none;
 }
 
-input[type="checkbox"]:checked ~ nav{
-    transform: translateX(400px);
+/*MENU*/
+.dp-menu ul{
+    list-style-type: none;
+    background-color: var(--cor-detalhes01);
 }
 
-.nav{
-    color: #ffffff;
-    text-align: center;
-    background-color: #282828;
-    width: 350px;
-    height: 100%;
+.dp-menu ul li{
+    display: inline;
+}
+
+.dp-menu ul li a{
+    color: var(--cor-fonte);
+    text-decoration: none;
+    display: inline-block;
+    padding: 2%;
+}
+
+.dp-menu ul li a:hover{
+    color: black;
+    background-color: var(--cor-detalhes02);
+}
+
+/*sub-menu*/
+.quadrado{
+    position: absolute;
     left: -400px;
-    position: absolute;
-    transition: all .5s;
-    border: 3px solid #000000;
-    border-bottom: 0px solid #000000;
-    border-top: 0px solid #000000;
+    height: 442px;
+    width: 330px;
+    margin-top: 7vh;
+    margin-left: 1vh;
+    box-shadow: 0 0 3rem black;
+    background-color: var(--cor-detalhes01);
 }
-/*Cabeçote*/
-#header{
-    position: absolute;
-    width: 100%;
-    height: 70px;
-    left: 0px;
-    top: 0px;
-    background: #282828;
-    border: 1px solid #000000;
+
+/*Imagens menu categoria*/
+.quadrado img{
+    width: 15%;
+    margin-left: 15px;
+    margin-top: 25px;
 }
-/*Nome da Página*/
-#logo{
+
+.categoria_menu{
+    padding-left: 26%;
+    font-size: 35px;
+    color: var(--cor-fonte);
+}
+
+.dp-menu ul li a{
+    padding: 10%;
+    font-size: 18px;
+    background-color: var(--cor-fundo);
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-left: 5px solid black;
+}
+
+input[type="checkbox"]:checked ~ ul
+{
+    transform: translate(475px);
+}
+
+input[type="checkbox"]:checked ~ .quadrado
+{
+    transform: translate(400px);
+}
+
+.dp-menu ul{
     position: absolute;
-    width: 80%;
-    height: 70px;
-    text-align: center;
-    top: -45px;
+    left: -400px;
+    height: 150px;
+    width: 250px;
+    margin-top: 12.9vh;
+    margin-left: 1.2vh;
+}
+
+.dp-menu img:hover ul{
+    display: block;
+}
+
+.dp-menu ul li a{
+    display: block;
+}
+/*Fim menu vertical animado*/
+
+header{
+    height: 7vh;
+    display: flex;
+    background-color: var(--cor-detalhes01);
+    box-shadow: 0 0 2rem black;
+}
+
+li{
+    list-style-type: none;
+}
+
+.categorias{
+    height: 80%;
+    margin-left: 2vh;
+    margin-top: 0.5vh;
+    cursor: pointer;
+}
+
+.logo{
+    font-size: 6vh;
+    color: var(--cor-fonte);
+    padding-left: 15%;
     font-family: 'Khand';
     font-style: normal;
-    font-weight: 400;
-    font-size: 55px;
-    line-height: 84px;
-    color: #ffffff;
 }
-/*Div total Menu Lateral*/
-#categorias{
-    box-sizing: border-box;
-    width: 92px;
-    height: 70px;
-    left: 0px;
-    top: 0px;
-    background: #282828;
-    border: 3px solid #000000;
-    border-bottom: 0px solid #000000;
-    border-top: 0px solid #000000;
+
+/*Barra de pesquisa*/
+.pesquisa{
+    padding-left: 15%;
 }
-/*Texto Título Categorias*/
-.navcateg{
-    padding-top: 10px;
-    padding-left: 10px;
+
+.barra_pesquisa{
+    height: 35%;
+    width: 150%;
+    margin-left: 47%;
+    margin-top: 2vh;
+    background-color: #D9D9D9;
 }
-/*Little Cart e togethers*/
-#carrinho{
-    box-sizing: border-box;
+
+.texto_pesquisa{
     position: absolute;
-    width: 180px;
-    height: 70px;
-    right: 150px;
-    top: 0px;
-    background: #282828;
-    border: 3px solid #000000;
-    border-bottom: 0px solid #000000;
-    border-top: 0px solid #000000;
+    margin-top: 2.5vh;
+    font-size: 115%;
+    color: var(--cor-fonte);
 }
 
-#carrinho:hover{
-    cursor: pointer;
-}
-
-#carrinhoitens{
+/*INICIO CARROSSEL*/
+.carrossel{
     margin: 0 auto;
-    padding-top: 5px;
-    padding-left: 65px;
-    color: #ffffff;
-}
-
-#carrinho img{
-    padding-top: 10px;
-    padding-left: 65px;
-}
-/*Entrando e togethers*/
-#login{
-    box-sizing: border-box;
-    position: absolute;
-    width: 153px;
-    height: 35px;
-    right: 0px;
-    top: 0px;
-    background: #282828;
-    border: 3px solid #000000;
-    border-top: 0px solid #000000;
-}
-
-#login:hover{
-    cursor: pointer;
-}
-
-#entrar{
-    margin-top: 7px;
-    padding-top: -20px;
-    padding-left: 50px;
-    color: #ffffff;
-}
-/*Register e afins*/
-#registro{
-    box-sizing: border-box;
-    position: absolute;
-    width: 153px;
-    height: 35px;
-    right: 0px;
-    bottom: 0px;
-    background: #282828;
-    border: 3px solid #000000;
-    border-top: 0px solid #000000;
-}
-
-#registro:hover{
-    cursor: pointer;
-}
-
-#registrar{
-    margin-top: 7px;
-    padding-top: -20px;
-    padding-left: 40px;
-    color: #ffffff;
-}
-/*Carrossel e afins*/
-.slider{
-    margin: 0 auto;
-    padding-top: 85px;
-    padding-left: 350px;
-    width: 1300px;
-    height: 230px;
+    margin-top: 5vh;
+    border: 4px solid var(--cor-detalhes01);
+    width: 800px;
+    height: 400px;
     overflow: hidden;
 }
 
 .slides{
     width: 400%;
-    height: 250px;
+    height: 400px;
     display: flex;
 }
 
 .slides input{
     display: none;
 }
-/*Imagens do Carrosel*/
+
 .slide{
     width: 25%;
     position: relative;
@@ -229,8 +180,8 @@ input[type="checkbox"]:checked ~ nav{
 .slide img{
     width: 800px;
 }
-/*Botões do Carrossel*/
-.manual-navigation{
+
+.manual{
     position: absolute;
     width: 800px;
     margin-top: -40px;
@@ -239,21 +190,21 @@ input[type="checkbox"]:checked ~ nav{
 }
 
 .manual-btn{
-    border: 2px solid #ffffff;
     padding: 5px;
+    border: 2px solid var(--cor-detalhes01);
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
 }
 
 .manual-btn:not(:last-child){
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .manual-btn:hover{
-    background-color: #ffffff;
+    background-color: var(--cor-detalhes02);
 }
-/*Comandos dos Botões do Carrossel*/
+
 #radio1:checked ~ .first{
     margin-left: 0;
 }
@@ -269,81 +220,39 @@ input[type="checkbox"]:checked ~ nav{
 #radio4:checked ~ .first{
     margin-left: -75%;
 }
-/*Div para automatizar o Carrosel (linkado ao JS)*/
-.navigation-auto div{
-    border: 2px solid #20a6ff;
+
+.navegacao-auto div{
     padding: 5px;
+    border: 2px solid var(--cor-detalhes01);
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
 }
 
-.navigation-auto{
+.navegacao-auto{
     position: absolute;
     width: 800px;
-    margin-top: 210px;
+    margin-top: 360px;
     display: flex;
     justify-content: center;
 }
 
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
+.navegacao-auto div:not(:last-child){
+    margin-right: 20px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: #ffffff;
+#radio1:checked ~ .navegacao-auto .navegacao1{
+    background-color: var(--cor-detalhes02);
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: #ffffff;
+#radio2:checked ~ .navegacao-auto .navegacao2{
+    background-color: var(--cor-detalhes02);
 }
 
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: #ffffff;
+#radio3:checked ~ .navegacao-auto .navegacao3{
+    background-color: var(--cor-detalhes02);
 }
 
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: #ffffff;
-}
-/*Highlights*/
-#destaques{
-    padding-left: 690px;
-}
-/*Div Produtos*/
-#catalogo{
-    padding-top: 15px;
-    padding-left: 15px;
-}
-/*Div Produtos2*/
-#produtos{
-    padding: 15px 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-/*Imagens Produtos*/
-#produtos img{
-    border: 2px solid #282828;
-    width: 120px;
-    height: 120px;
-}
-/*Div para alinhar interno*/
-.prodallign{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.prodallign:hover{
-    cursor: pointer;
-}
-/*Texto dos produtos*/
-.description{
-    margin-top: 0;
-    margin-left: 10px;
-    border: 1px dashed #000000;
-    background-color: #282828;
-    color: #C9C9C9;
+#radio4:checked ~ .navegacao-auto .navegacao4{
+    background-color: var(--cor-detalhes02);
 }
